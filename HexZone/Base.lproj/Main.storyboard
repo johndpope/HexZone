@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HexZone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ErY-BE-3qP" customClass="MGLMapView">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mf5-aZ-56a">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="RUs-sG-U5H"/>
+                                            <constraint firstAttribute="width" constant="50" id="eOU-vA-GVc"/>
+                                        </constraints>
+                                        <state key="normal" image="clock-128"/>
+                                        <connections>
+                                            <action selector="didTapTimeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yz1-Mb-Ppl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mf5-aZ-56a" secondAttribute="trailing" constant="16" id="T7z-vF-Q4I"/>
+                                    <constraint firstItem="Mf5-aZ-56a" firstAttribute="top" secondItem="ErY-BE-3qP" secondAttribute="top" constant="25" id="ZML-Ky-cn4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ErY-BE-3qP" secondAttribute="bottom" id="7Or-0O-6eC"/>
+                            <constraint firstItem="ErY-BE-3qP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aVe-5H-kGB"/>
+                            <constraint firstAttribute="trailing" secondItem="ErY-BE-3qP" secondAttribute="trailing" id="rZP-dE-1cg"/>
+                            <constraint firstItem="ErY-BE-3qP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="xd6-cd-cYc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ErY-BE-3qP" id="yeI-6L-gNn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock-128" width="64" height="64"/>
+    </resources>
+</document>
